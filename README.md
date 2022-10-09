@@ -1,0 +1,2 @@
+# Panorama
+A panorama creator
