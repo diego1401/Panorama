@@ -1,0 +1,144 @@
+## This file contains all the build statements describing the
+# compilation DAG.
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# 
+# Which is the root file.
+# =============================================================================
+
+# =============================================================================
+# Project: Panorama
+# Configurations: Debug
+# =============================================================================
+
+#############################################
+# Minimal version of Ninja required by this file
+
+ninja_required_version = 1.5
+
+
+#############################################
+# Set configuration variable for custom commands.
+
+CONFIGURATION = Debug
+# =============================================================================
+# Include auxiliary files.
+
+
+#############################################
+# Include rules file.
+
+include CMakeFiles/rules.ninja
+
+# =============================================================================
+
+#############################################
+# Logical path to working directory; prefix for absolute paths.
+
+cmake_ninja_workdir = /Users/Diego/Documents/University/MVA/3DVision/Assignement1/build-Panorama_Initial-Desktop_Qt_5_15_2_clang_64bit-Debug/
+# =============================================================================
+# Object build statements for EXECUTABLE target Panorama
+
+
+#############################################
+# Order-only phony target for Panorama
+
+build cmake_object_order_depends_target_Panorama: phony || CMakeFiles/Panorama.dir
+
+build CMakeFiles/Panorama.dir/Panorama.cpp.o: CXX_COMPILER__Panorama_Debug /Users/Diego/Documents/University/MVA/3DVision/Imagine++-4.3.2-Darwin-i386/Panorama_Initial/Panorama.cpp || cmake_object_order_depends_target_Panorama
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/Panorama.dir/Panorama.cpp.o.d
+  FLAGS = -g -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -DSRCDIR="/Users/Diego/Documents/University/MVA/3DVision/Imagine++-4.3.2-Darwin-i386/Panorama_Initial" -fPIC -std=gnu++11
+  INCLUDES = -I/Users/Diego/Documents/University/MVA/3DVision/Imagine++-4.3.2-Darwin-i386/include -I/Users/Diego/Documents/University/MVA/3DVision/Imagine++-4.3.2-Darwin-i386/ThirdParty/Eigen -iframework /Users/Diego/Qt/5.15.2/clang_64/lib -isystem /Users/Diego/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers -isystem /Users/Diego/Qt/5.15.2/clang_64/./mkspecs/macx-clang -isystem /Users/Diego/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers -isystem /Users/Diego/Qt/5.15.2/clang_64/lib/QtGui.framework/Headers -isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/System/Library/Frameworks/OpenGL.framework/Headers -isystem /Users/Diego/Qt/5.15.2/clang_64/lib/QtOpenGL.framework/Headers
+  OBJECT_DIR = CMakeFiles/Panorama.dir
+  OBJECT_FILE_DIR = CMakeFiles/Panorama.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Panorama
+
+
+#############################################
+# Link the executable Panorama
+
+build Panorama: CXX_EXECUTABLE_LINKER__Panorama_Debug CMakeFiles/Panorama.dir/Panorama.cpp.o | /Users/Diego/Qt/5.15.2/clang_64/lib/QtOpenGL.framework/QtOpenGL /Users/Diego/Qt/5.15.2/clang_64/lib/QtWidgets.framework/QtWidgets /Users/Diego/Qt/5.15.2/clang_64/lib/QtGui.framework/QtGui /Users/Diego/Qt/5.15.2/clang_64/lib/QtCore.framework/QtCore
+  FLAGS = -g -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk
+  LINK_FLAGS = -L"/Users/Diego/Documents/University/MVA/3DVision/Imagine++-4.3.2-Darwin-i386/lib" -L"/Users/Diego/Documents/University/MVA/3DVision/Imagine++-4.3.2-Darwin-i386/lib" -L"/Users/Diego/Documents/University/MVA/3DVision/Imagine++-4.3.2-Darwin-i386/lib"
+  LINK_LIBRARIES = -Wl,-rpath,/Users/Diego/Qt/5.15.2/clang_64/lib  -lImagineLinAlg  -lImagineGraphics  -lImagineGraphics  /Users/Diego/Qt/5.15.2/clang_64/lib/QtOpenGL.framework/QtOpenGL  /Users/Diego/Qt/5.15.2/clang_64/lib/QtWidgets.framework/QtWidgets  /Users/Diego/Qt/5.15.2/clang_64/lib/QtGui.framework/QtGui  /Users/Diego/Qt/5.15.2/clang_64/lib/QtCore.framework/QtCore
+  OBJECT_DIR = CMakeFiles/Panorama.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = Panorama
+  TARGET_PDB = Panorama.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/Diego/Documents/University/MVA/3DVision/Assignement1/build-Panorama_Initial-Desktop_Qt_5_15_2_clang_64bit-Debug && /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/bin/ccmake -S/Users/Diego/Documents/University/MVA/3DVision/Imagine++-4.3.2-Darwin-i386/Panorama_Initial -B/Users/Diego/Documents/University/MVA/3DVision/Assignement1/build-Panorama_Initial-Desktop_Qt_5_15_2_clang_64bit-Debug
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build edit_cache: phony CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/Diego/Documents/University/MVA/3DVision/Assignement1/build-Panorama_Initial-Desktop_Qt_5_15_2_clang_64bit-Debug && /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/bin/cmake --regenerate-during-build -S/Users/Diego/Documents/University/MVA/3DVision/Imagine++-4.3.2-Darwin-i386/Panorama_Initial -B/Users/Diego/Documents/University/MVA/3DVision/Assignement1/build-Panorama_Initial-Desktop_Qt_5_15_2_clang_64bit-Debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build rebuild_cache: phony CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Target aliases.
+
+# =============================================================================
+# Folder targets.
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/Diego/Documents/University/MVA/3DVision/Assignement1/build-Panorama_Initial-Desktop_Qt_5_15_2_clang_64bit-Debug
+
+build all: phony Panorama
+
+# =============================================================================
+# Built-in targets
+
+
+#############################################
+# Re-run CMake if any of its inputs changed.
+
+build build.ninja: RERUN_CMAKE | /Users/Diego/Documents/University/MVA/3DVision/Imagine++-4.3.2-Darwin-i386/CMake/ImagineConfig.cmake /Users/Diego/Documents/University/MVA/3DVision/Imagine++-4.3.2-Darwin-i386/CMake/UseImagineCommon.cmake /Users/Diego/Documents/University/MVA/3DVision/Imagine++-4.3.2-Darwin-i386/CMake/UseImagineEigen.cmake /Users/Diego/Documents/University/MVA/3DVision/Imagine++-4.3.2-Darwin-i386/CMake/UseImagineGraphics.cmake /Users/Diego/Documents/University/MVA/3DVision/Imagine++-4.3.2-Darwin-i386/CMake/UseImagineImages.cmake /Users/Diego/Documents/University/MVA/3DVision/Imagine++-4.3.2-Darwin-i386/CMake/UseImagineLinAlg.cmake /Users/Diego/Documents/University/MVA/3DVision/Imagine++-4.3.2-Darwin-i386/CMake/UseImagineQt.cmake /Users/Diego/Documents/University/MVA/3DVision/Imagine++-4.3.2-Darwin-i386/Panorama_Initial/CMakeLists.txt /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Core/Qt5CoreConfig.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Core/Qt5CoreMacros.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QCocoaIntegrationPlugin.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QICNSPlugin.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QMacHeifPlugin.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QMacJp2Plugin.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QSvgIconPlugin.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QSvgPlugin.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QTgaPlugin.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QTiffPlugin.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QVirtualKeyboardPlugin.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QWbmpPlugin.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QWebGLIntegrationPlugin.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QWebpPlugin.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QXdgDesktopPortalThemePlugin.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5OpenGL/Qt5OpenGLConfig.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5OpenGL/Qt5OpenGLConfigVersion.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Widgets/Qt5Widgets_QMacStylePlugin.cmake /Users/Diego/Qt/Qt$ Creator.app/Contents/Resources/package-manager/auto-setup.cmake /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeCInformation.cmake /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeParseArguments.cmake /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/AppleClang-C.cmake /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/AppleClang-CXX.cmake /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Clang.cmake /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/GNU.cmake /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Apple-AppleClang-C.cmake /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Apple-AppleClang-CXX.cmake /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Apple-Clang-C.cmake /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Apple-Clang-CXX.cmake /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Darwin.cmake /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake
+  pool = console
+
+
+#############################################
+# A missing CMake input file is not an error.
+
+build /Users/Diego/Documents/University/MVA/3DVision/Imagine++-4.3.2-Darwin-i386/CMake/ImagineConfig.cmake /Users/Diego/Documents/University/MVA/3DVision/Imagine++-4.3.2-Darwin-i386/CMake/UseImagineCommon.cmake /Users/Diego/Documents/University/MVA/3DVision/Imagine++-4.3.2-Darwin-i386/CMake/UseImagineEigen.cmake /Users/Diego/Documents/University/MVA/3DVision/Imagine++-4.3.2-Darwin-i386/CMake/UseImagineGraphics.cmake /Users/Diego/Documents/University/MVA/3DVision/Imagine++-4.3.2-Darwin-i386/CMake/UseImagineImages.cmake /Users/Diego/Documents/University/MVA/3DVision/Imagine++-4.3.2-Darwin-i386/CMake/UseImagineLinAlg.cmake /Users/Diego/Documents/University/MVA/3DVision/Imagine++-4.3.2-Darwin-i386/CMake/UseImagineQt.cmake /Users/Diego/Documents/University/MVA/3DVision/Imagine++-4.3.2-Darwin-i386/Panorama_Initial/CMakeLists.txt /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Core/Qt5CoreConfig.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Core/Qt5CoreMacros.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QCocoaIntegrationPlugin.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QICNSPlugin.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QMacHeifPlugin.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QMacJp2Plugin.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QSvgIconPlugin.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QSvgPlugin.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QTgaPlugin.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QTiffPlugin.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QVirtualKeyboardPlugin.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QWbmpPlugin.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QWebGLIntegrationPlugin.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QWebpPlugin.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QXdgDesktopPortalThemePlugin.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5OpenGL/Qt5OpenGLConfig.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5OpenGL/Qt5OpenGLConfigVersion.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake /Users/Diego/Qt/5.15.2/clang_64/lib/cmake/Qt5Widgets/Qt5Widgets_QMacStylePlugin.cmake /Users/Diego/Qt/Qt$ Creator.app/Contents/Resources/package-manager/auto-setup.cmake /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeCInformation.cmake /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeParseArguments.cmake /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/AppleClang-C.cmake /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/AppleClang-CXX.cmake /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Clang.cmake /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/GNU.cmake /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Apple-AppleClang-C.cmake /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Apple-AppleClang-CXX.cmake /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Apple-Clang-C.cmake /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Apple-Clang-CXX.cmake /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Darwin.cmake /Users/Diego/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake: phony
+
+
+#############################################
+# Clean all the built files.
+
+build clean: CLEAN
+
+
+#############################################
+# Print all primary targets available.
+
+build help: HELP
+
+
+#############################################
+# Make the all target the default.
+
+default all

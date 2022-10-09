@@ -1,0 +1,3 @@
+/Users/Diego/Documents/University/MVA/3DVision/Panorama/Assignement1/CMakeFiles/Panorama.dir
+/Users/Diego/Documents/University/MVA/3DVision/Panorama/Assignement1/CMakeFiles/edit_cache.dir
+/Users/Diego/Documents/University/MVA/3DVision/Panorama/Assignement1/CMakeFiles/rebuild_cache.dir
