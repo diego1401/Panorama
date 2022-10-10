@@ -19,4 +19,4 @@ Now, run the program. Your 2 images will pop up, you will then have to **right**
 
 ![This is an image](/Panorama_Initial/figures/image1_selection.png)
 
-To create panoramas from more than 2 images it is sufficient to apply this program iteratively. Simply save using the 'save' function from the Imagine++ the result, and use the next image to continue adding images to your panorama!
+To create panoramas from more than 2 images it is sufficient to apply this program iteratively. Simply save using the `save` function from the Imagine++ the result, and use the next image to continue adding images to your panorama!
