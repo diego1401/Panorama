@@ -16,4 +16,4 @@ const char* s2 = argc>2? argv[2]: srcPath(IMAGE_NAME2);
 
 Now, run the program. Your 2 images will pop up, you will then have to click **at least 4 matching points**. See example below
 
-![This is an image](Panorama_init/figures/image1_selection.png)
+![This is an image](/Panorama_init/figures/image1_selection.png)
