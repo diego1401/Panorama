@@ -18,3 +18,5 @@ const char* s2 = argc>2? argv[2]: srcPath(IMAGE_NAME2);
 Now, run the program. Your 2 images will pop up, you will then have to **right** click **at least 4 matching points**. Once you have chosen your desired points do a **left click** in the first image. See the example of selection below.
 
 ![This is an image](/Panorama_Initial/figures/image1_selection.png)
+
+To create panoramas from more than 2 images it is sufficient to apply this program iteratively. Simply save using the 'save' function from the Imagine++ the result, and use the next image to continue adding images to your panorama!
